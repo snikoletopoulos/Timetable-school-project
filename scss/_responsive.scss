@@ -1,0 +1,22 @@
+@media only screen and (max-width: 500px) {
+  form {
+    flex-direction: column;
+  }
+
+  .section-conteiner {
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+
+    &.active {
+      height: unset;
+      padding: 30px;
+      padding-top: 60px;
+      background-color: red;
+    }
+  }
+
+  article {
+    width: 90%;
+  }
+}
