@@ -6,13 +6,18 @@
   margin: 0;
 }
 
-body {
+:root {
+  font-family: "fira sans", Helvetica, sans-serif;
+}
+
+form {
+  width: 100%;
+  height: 100%;
   display: flex;
   background-color: #c0c0c0;
   justify-content: space-around;
   align-items: center;
   height: 500px;
-  font-family: "fira sans", Helvetica, sans-serif;
 }
 
 /* Colors */
@@ -57,7 +62,7 @@ h1 {
 }
 
 @media only screen and (max-width: 500px) {
-  body {
+  form {
     flex-direction: column;
   }
   .section-conteiner {
