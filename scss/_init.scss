@@ -5,8 +5,14 @@
   margin: 0;
 }
 
-:root{
+:root {
   font-family: "fira sans", Helvetica, sans-serif;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: red;
 }
 
 form {
@@ -16,5 +22,5 @@ form {
   background-color: #c0c0c0;
   justify-content: space-around;
   align-items: center;
-  height: 500px;
+  // height: 500px;
 }
