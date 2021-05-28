@@ -79,12 +79,29 @@ h1 {
   padding-top: 60px;
 }
 
-.section-conteiner .btn {
+.btn {
   background-color: #f47b20;
   color: white;
   font-size: 24px;
   border-radius: 50px;
   height: 2.25em;
+}
+
+#pop-up {
+  border: 3px solid black;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.85);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  z-index: 2;
+  padding: 40px;
+  place-self: start;
+}
+
+.course {
+  width: 100%;
 }
 
 @media only screen and (max-width: 500px) {
