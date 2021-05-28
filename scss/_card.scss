@@ -23,6 +23,7 @@ h1 {
 	margin: 0;
 	transform: translateY(-50%);
 	z-index: 1;
+	white-space: nowrap;
 }
 
 .section-conteiner {
@@ -38,9 +39,9 @@ h1 {
 }
 
 .btn {
-  background-color: $primaray-color;
-  color: white;
-  font-size: 24px;
-  border-radius: 50px;
-  height: 2.25em;
+	background-color: $primaray-color;
+	color: white;
+	font-size: 24px;
+	border-radius: 50px;
+	height: 2.25em;
 }
