@@ -1,3 +1,4 @@
+/* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
 *,
 *::after,
@@ -11,9 +12,11 @@
 }
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   background-color: #c0c0c0;
   display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-areas: "header" "main" "footer";
   place-items: center;
 }
 
@@ -21,14 +24,31 @@ form {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
+  grid-area: main;
 }
 
-/* Colors */
+svg {
+  width: 100%;
+}
+
+#top-svg {
+  place-self: start;
+  grid-area: header;
+}
+
+#bot-svg {
+  place-self: end;
+  grid-area: footer;
+}
+
 /*===============
     Class card
 =================*/
 article {
   width: 30%;
+  max-width: 400px;
+  position: relative;
+  margin-top: 3em;
 }
 
 h1 {
@@ -36,19 +56,20 @@ h1 {
   color: white;
   font-size: 45px;
   margin: 0 auto;
+  position: absolute;
   display: flex;
   justify-content: center;
   border-radius: 65px;
   padding: 20px;
   width: 100%;
   margin: 0;
-  transform: translateY(50%);
+  transform: translateY(-50%);
   z-index: 1;
 }
 
 .section-conteiner {
   background: #f9f9f9;
-  border: 3px solid #4b73ff;
+  border: 3px solid #607de4;
   border-radius: 0px 0px 30px 30px;
   padding-top: 20px;
   display: grid;

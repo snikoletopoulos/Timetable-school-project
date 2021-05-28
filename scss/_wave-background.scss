@@ -1,0 +1,13 @@
+svg {
+	width: 100%;
+}
+
+#top-svg {
+  place-self: start;
+  grid-area: header;
+}
+
+#bot-svg {
+  place-self: end;
+  grid-area: footer;
+}

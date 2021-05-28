@@ -4,6 +4,9 @@
 
 article {
 	width: 30%;
+	max-width: 400px;
+	position: relative;
+	margin-top: 3em;
 }
 
 h1 {
@@ -11,19 +14,20 @@ h1 {
 	color: white;
 	font-size: 45px;
 	margin: 0 auto;
+	position: absolute;
 	display: flex;
 	justify-content: center;
 	border-radius: 65px;
 	padding: 20px;
 	width: 100%;
 	margin: 0;
-	transform: translateY(50%);
+	transform: translateY(-50%);
 	z-index: 1;
 }
 
 .section-conteiner {
 	background: #f9f9f9;
-	border: 3px solid #4b73ff;
+	border: 3px solid $secondary-color;
 	border-radius: 0px 0px 30px 30px;
 	padding-top: 20px;
 	display: grid;
