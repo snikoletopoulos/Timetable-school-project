@@ -16,7 +16,6 @@ body {
 	grid-template-rows: 1fr 2fr 1fr;
 	grid-template-areas: "header" "main" "footer";
 	place-items: center;
-	// overflow: hidden;
 }
 
 form {
@@ -24,4 +23,9 @@ form {
 	width: 100%;
 	justify-content: space-evenly;
 	grid-area: main;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
 }
