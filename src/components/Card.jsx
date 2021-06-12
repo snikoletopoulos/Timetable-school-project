@@ -1,7 +1,7 @@
 //eslint-disable
 import React from "react";
 
-export default function Card({ classroom, ammountOfClassrooms, func }) {
+export default function Card({ classroom, ammountOfClassrooms, func , type}) {
 	let nums = [];
 	for (let i = 0; i < ammountOfClassrooms; i++) nums.push(i + 1);
 
@@ -13,7 +13,7 @@ export default function Card({ classroom, ammountOfClassrooms, func }) {
 					<input
 						key={num}
 						id="test"
-						type="button"
+						type={type}
 						className="btn"
 						value={classroom + num}
 						name="class"

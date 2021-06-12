@@ -16,9 +16,9 @@ export default function App() {
 	return (
 		<>
 			<form>
-				<Card func={open} classroom="Α" ammountOfClassrooms="4" />
-				<Card func={open} classroom="Β" ammountOfClassrooms="4" />
-				<Card func={open} classroom="Γ" ammountOfClassrooms="4" />
+				<Card classroom="Α" ammountOfClassrooms="4" type="submit" />
+				<Card func={open} classroom="Β" ammountOfClassrooms="4" type="button" />
+				<Card func={open} classroom="Γ" ammountOfClassrooms="4" type="button" />
 				<Popup open={popup} />
 			</form>
 		</>
