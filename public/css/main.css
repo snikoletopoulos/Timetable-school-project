@@ -1,5 +1,11 @@
+/*=============
+    Variables
+===============*/
 /* Colors */
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap");
+/*==================
+    Initial setup
+====================*/
 *,
 *::after,
 *::before {
@@ -20,7 +26,8 @@ body {
   place-items: center;
 }
 
-form {
+form,
+#root {
   display: flex;
   width: 100%;
   justify-content: space-evenly;
@@ -32,15 +39,21 @@ form {
   height: 100%;
 }
 
+/*=====================
+    Wave background
+=======================*/
+/* General */
 svg {
   width: 100%;
 }
 
+/* Top svg wave */
 #top-svg {
   place-self: start;
   grid-area: header;
 }
 
+/* Bottom svg wave */
 #bot-svg {
   place-self: end;
   grid-area: footer;
@@ -49,6 +62,7 @@ svg {
 /*===============
     Class card
 =================*/
+/* General gard */
 section {
   width: 30%;
   max-width: 400px;
@@ -56,6 +70,7 @@ section {
   margin-top: 3em;
 }
 
+/* Class name */
 h1 {
   background-color: #607de4;
   color: white;
@@ -73,6 +88,7 @@ h1 {
   white-space: nowrap;
 }
 
+/* Buttons conteiner */
 .section-conteiner {
   background: #f9f9f9;
   border: 3px solid #607de4;
@@ -85,6 +101,7 @@ h1 {
   padding-top: 60px;
 }
 
+/* Class select button */
 .btn {
   background-color: #f47b20;
   color: white;
@@ -93,6 +110,10 @@ h1 {
   height: 2.25em;
 }
 
+/*===============
+    Pop up
+=================*/
+/* Popup */
 #pop-up {
   border: 3px solid black;
   border-radius: 50px;
@@ -112,8 +133,42 @@ h1 {
   visibility: hidden;
 }
 
+/* Button */
 .course {
   width: 80%;
+}
+
+/* Exit button */
+#popup-exit {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+}
+
+#popup-exit::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  border-radius: 10px;
+  background-color: red;
+  border: 1px solid red;
+  transform: rotate(-45deg);
+}
+
+#popup-exit::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 5px;
+  background-color: red;
+  border: 1px solid red;
+  border-radius: 10px;
+  transform: rotate(45deg);
 }
 
 @media only screen and (max-width: 500px) {

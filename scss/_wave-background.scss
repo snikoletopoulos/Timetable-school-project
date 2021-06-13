@@ -1,13 +1,20 @@
+/*=====================
+    Wave background
+=======================*/
+
+/* General */
 svg {
 	width: 100%;
 }
 
+/* Top svg wave */
 #top-svg {
-  place-self: start;
-  grid-area: header;
+	place-self: start;
+	grid-area: header;
 }
 
+/* Bottom svg wave */
 #bot-svg {
-  place-self: end;
-  grid-area: footer;
+	place-self: end;
+	grid-area: footer;
 }

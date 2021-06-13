@@ -2,6 +2,7 @@
     Class card
 =================*/
 
+/* General gard */
 section {
 	width: 30%;
 	max-width: 400px;
@@ -9,6 +10,7 @@ section {
 	margin-top: 3em;
 }
 
+/* Class name */
 h1 {
 	background-color: $secondary-color;
 	color: white;
@@ -26,6 +28,7 @@ h1 {
 	white-space: nowrap;
 }
 
+/* Buttons conteiner */
 .section-conteiner {
 	background: #f9f9f9;
 	border: 3px solid $secondary-color;
@@ -38,6 +41,7 @@ h1 {
 	padding-top: 60px;
 }
 
+/* Class select button */
 .btn {
 	background-color: $primaray-color;
 	color: white;

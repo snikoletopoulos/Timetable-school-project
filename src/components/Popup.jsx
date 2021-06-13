@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Popup({ open }) {
+export default function Popup({ open, classroom, exit }) {
 	let styles;
 
 	if (open) {
@@ -9,26 +9,21 @@ export default function Popup({ open }) {
 		styles = { visibility: "hidden" };
 	}
 
+	let courses = ["Θεωρητική", "Θετική", "Τεχνολογική"];
+
 	return (
 		<div id="pop-up" style={styles}>
-			<input
-				type="submit"
-				value="Θεωρητική"
-				className="btn course"
-				name="course"
-			/>
-			<input
-				type="submit"
-				value="Θετική"
-				className="btn course"
-				name="course"
-			/>
-			<input
-				type="submit"
-				value="Τεχνολογική"
-				className="btn course"
-				name="course"
-			/>
+			{classroom && <input type="hidden" value={classroom} name="class" />}
+			{courses.map((course) => (
+				<input
+					key={course}
+					type="submit"
+					value={course}
+					className="btn course"
+					name="course"
+				/>
+			))}
+			<span id="popup-exit" onClick={exit}></span>
 		</div>
 	);
 }
