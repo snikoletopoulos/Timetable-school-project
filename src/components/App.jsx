@@ -15,25 +15,17 @@ export default function App() {
 		}
 	}
 
-	function selectClass(e) {}
-	//eslint-disable-next-line
-	function prevents(event) {
-		event.preventDefault();
-	}
-
 	return (
 		<>
 			<form>
 				<Card classroom="Α" ammountOfClassrooms="4" type="submit" />
 				<Card
-					onClick={selectClass}
 					func={togglePopup}
 					classroom="Β"
 					ammountOfClassrooms="4"
 					type="button"
 				/>
 				<Card
-					onClick={selectClass}
 					func={togglePopup}
 					classroom="Γ"
 					ammountOfClassrooms="4"

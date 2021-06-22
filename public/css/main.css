@@ -28,6 +28,7 @@ form,
   width: 100%;
   justify-content: space-evenly;
   grid-area: main;
+  align-items: center;
 }
 
 #root {
