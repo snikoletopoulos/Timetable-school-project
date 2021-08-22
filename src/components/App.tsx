@@ -1,38 +1,19 @@
-import React, { useState } from "react";
-import Card from "./Card";
-import Popup from "./Popup";
+import React from "react";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import ClassroomSelect from "./ClassroomSelect";
+import TimeTable from "./TimeTable";
 
 export default function App() {
-	const [popup, openPopup] = useState<boolean>(false);
-	const [classSelected, setClassSelected] = useState<string>("");
-
-	function togglePopup(e: React.MouseEvent<HTMLInputElement>): void {
-		setClassSelected(e.target.value);
-		if (popup) {
-			openPopup(false);
-		} else {
-			openPopup(true);
-		}
-	}
-
 	return (
-		<>
-			<form>
-				<Card classroom="Α" ammountOfClassrooms={4} type="submit" />
-				<Card
-					func={togglePopup}
-					classroom="Β"
-					ammountOfClassrooms={4}
-					type="button"
-				/>
-				<Card
-					func={togglePopup}
-					classroom="Γ"
-					ammountOfClassrooms={4}
-					type="button"
-				/>
-				<Popup open={popup} exit={togglePopup} classroom={classSelected} />
-			</form>
-		</>
+		<Router>
+			<Switch>
+				<Route exact path="/">
+					<ClassroomSelect />
+				</Route>
+				<Route exact path="/time-table">
+					<TimeTable />
+				</Route>
+			</Switch>
+		</Router>
 	);
 }

@@ -1,18 +1,18 @@
 import React from "react";
 
 export default function Popup({ open, classroom, exit }: PopupProps) {
-	let styles;
+	let style: React.CSSProperties;
 
 	if (open) {
-		styles = { visibility: "visible" };
+		style = { visibility: "visible" };
 	} else {
-		styles = { visibility: "hidden" };
+		style = { visibility: "hidden" };
 	}
 
 	let courses = ["Θεωρητική", "Θετική", "Τεχνολογική"];
 
 	return (
-		<dialog id="pop-up" open={open}>
+		<div id="pop-up" style={style}>
 			{classroom && <input type="hidden" value={classroom} name="class" />}
 			{courses.map((course) => (
 				<input
@@ -24,12 +24,12 @@ export default function Popup({ open, classroom, exit }: PopupProps) {
 				/>
 			))}
 			<span id="popup-exit" onClick={exit}></span>
-		</dialog>
+		</div>
 	);
 }
 
-type PopupProps = {
+interface PopupProps {
 	open: boolean;
 	classroom: string;
 	exit: React.MouseEventHandler<HTMLSpanElement>;
-};
+}

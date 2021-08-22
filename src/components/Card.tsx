@@ -1,30 +1,31 @@
 //eslint-disable
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Card({
 	classroom,
 	ammountOfClassrooms,
-	func,
-	type,
+	submit,
+	openPopup,
 }: CardProps) {
 	let nums = [];
-	for (let i = 0; i < ammountOfClassrooms; i++) nums.push(i + 1);
+	for (let i = 1; i <= ammountOfClassrooms; i++) nums.push(i);
 
 	return (
 		<section>
 			<h1>{classroom + "' Λυκείου"}</h1>
 			<div className="section-conteiner">
-				{nums.map((num) => (
-					<input
-						key={num}
-						id="test"
-						type={type}
-						className="btn"
-						value={classroom + num}
-						name="class"
-						onClick={func}
-					/>
-				))}
+				{nums.map((num) =>
+					submit ? (
+						<Link key={classroom + num} className="btn" to={`/time-table`}>
+							sdfa
+						</Link>
+					) : (
+						<button key={classroom + num} onClick={openPopup} className="btn">
+							{classroom + num}
+						</button>
+					)
+				)}
 			</div>
 		</section>
 	);
@@ -33,6 +34,6 @@ export default function Card({
 type CardProps = {
 	classroom: string;
 	ammountOfClassrooms: number;
-	func?: React.MouseEventHandler<HTMLInputElement>;
-	type: string;
+	submit: boolean;
+	openPopup?: React.MouseEventHandler;
 };
